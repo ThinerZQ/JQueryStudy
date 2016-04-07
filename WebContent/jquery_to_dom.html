@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+</head>
+<body>
+	<input type="text" value="zhang" id="username" name="username">
+</body>
+<script type="text/javascript">
+	//方法一
+	var $username = $("#username");
+	alert($username.val());
+	//jquery是数组对象
+	var username =$username[0];
+	alert(username.value);
+	//方法二
+	var username1 = $username.get(0);
+	alert(username1.value);
+	
+	
+	
+</script>
+</html>

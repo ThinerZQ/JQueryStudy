@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+</head>
+<body>
+
+<p>段落1</p>
+<p>段落2</p>
+<p>段落3</p>
+<p>段落4</p>
+
+
+<table border="1">
+	<tr>
+		<td>1</td>
+		<td>1</td>
+		
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>2</td>
+		
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>3</td>
+		
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>5</td>
+		
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>6</td>
+		
+	</tr>
+	
+</table>
+</body>
+<script type="text/javascript">
+
+	$("document").ready(function(){
+		/*
+		$("p").each(function(index,domEle){
+			$(this).click(function(){
+				alert($(this).html());
+			})
+		})
+		*/
+		var $p=$("p");//这是一个集合
+		/*使用全局each函数
+		$.each(object,function(index,domEle){
+			
+		})
+		*/
+		$.each($p,function(index,domEle){
+			$(domEle).click(function(){
+				alert($(domEle).text());
+			})
+		})
+		
+		$("table:eq(0) tr:even").css("background","red");
+		
+		
+		
+	})
+</script>
+</html>

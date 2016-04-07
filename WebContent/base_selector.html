@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="jQuery.js">
+</script>
+<style type="text/css">
+	div,span{
+		width:140px;
+		height:140px;
+		margin:20px;
+		background: #9999cc;
+		border:#000 1px solid;
+		float:left;
+		font-size:17px;
+		font-fimily:Roman;
+	}
+	div.mini{
+	
+		width:30px;
+		height:30px;
+		background: #cc66ff;
+		border:#000 1px solid;
+		font-size:12px;
+		font-fimily:Roman;
+	}
+</style>
+<body>
+		
+		<input type="button" value="保存" class="mini" name="ok" class="mini"/>
+		<input type="button" value="改变id为one的元素的背景色#0000ff" id="b1"/>
+		<input type="button" value="改变元素名位<div>的所有元素的背景色#0000ff" id="b2"/>
+		<input type="button" value="改变class位mini的所有元素的背景色#00ff33" id="b3"/>
+		<input type="button" value="改变所有元素的背景色位#00ff33" id="b4"/>
+		<input type="button" value="改变所有<span>元素和id为two的元素的背景色为3399ff" id="b5"/>
+		
+		<h1>天气冷了</h1>
+		<h2>天气又冷了</h2>
+		<div id="one">
+			id为one
+		</div>
+		<div id="two" class="mini">
+			id为two class是mini
+			<div class="mini">class是mini</div>
+		</div>
+		<div class="one">
+			class是one
+			<div class="mini">class是mini</div>
+			<div class="mini">class是mini</div>
+		</div>
+		<div class="one">
+			class是one
+			<div class="mini01">class是mini01</div>
+			<div class="mini">class是mini</div>
+		</div>
+		<br>
+		<div id="mover">
+			动画
+		</div>
+		<br>
+		<span class="spanone">
+			span
+		</span>
+		<span class="mini">
+			span
+		</span>
+</body>
+<script type="text/javascript">
+	
+	
+	$("#b1").click(function(){
+		$("#one").css("background","red");
+	})
+	
+	$("#b2").click(function(){
+		$("div").css("background","red");
+	})
+	
+	$("#b3").click(function(){
+		$(".mini").css("background","red");
+	})
+	$("#b4").click(function(){
+		$("*").css("background","red");
+	})
+	$("#b5").click(function(){
+		$("span,#two").css("background","red");
+	})
+	
+	
+	
+	
+	
+	
+	
+</script>
+</html>

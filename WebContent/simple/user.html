@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+</head>
+<body>
+
+	<center>
+		<br/><br/>
+		添加用户：<br/>
+		姓名：<input type="text" name="name" id="name"/>&nbsp;&nbsp;
+		email:<input type="text" name="email" id="email"/>&nbsp;&nbsp;
+		电话：<input type="text" name="tel" id="tel"/><br/>
+		<input type="button" value="提交" id="adduser">
+		<br>
+		<hr>
+		<table id="usertable" border="1" cellpadding="3" cellspacing="0">
+			<tbody><tr>
+				<th>姓名</th>
+				<th>email</th>
+				<th>电话</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<td>Tom</td>
+				<td>tom@qq.com</td>
+				<td>241343</td>
+				<td><a href="delete?id=Tom">Delete</a></td>
+			</tr>
+			<tr>
+				<td>jackie</td>
+				<td>jackie@qq.com</td>
+				<td>24123223</td>
+				<td><a href="delete?id=jackie">Delete</a></td>
+			</tr>
+			</tbody>
+		</table>
+	</center>
+</body>
+<script type="text/javascript">
+	$("#adduser").click(function(){
+		alert("111");
+		var nameValue=$("#name").val();
+		var emailValue=$("#email").val();
+		var telValue=$("#tel").val();
+		
+		var nametd=$("</td>");
+		var emailtd=$("</td>");
+		var teltd=$("</td>");
+		
+		nametd.text(nameValue);
+		emailtd.text(emailValue);
+		teltd.text(telValue);
+		
+		var $a = $("</a>");
+		$a.attr("href","deleteEmp?id="+nameValue);
+		
+		$a.text("delete");
+		
+		var $atd=$("</td>");
+		$atd.append($a);
+		
+		var $tr=$("</tr>")
+		$tr.append(nametd);
+		$tr.append(emailtd);
+		
+		$tr.append(teltd);
+		$tr.append($atd);
+		
+		$("#usertable").children().eq(0).append($tr);
+		
+		
+		
+		
+		
+	})
+	
+
+</script>
+</html>
